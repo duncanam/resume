@@ -27,8 +27,7 @@
 \usepackage{url}
 
 \name{Duncan McGough}
-\address{(605)~$\cdot$~484~$\cdot$~3043 \quad \\ \quad duncan.mcgough@colorado.edu \quad \\ \quad  \url{duncanam.github.io}} 
-%\address{\textbf{Full Resume and Work Experience}}  % full resume 
+\address{(605)~$\cdot$~484~$\cdot$~3043 \quad \\ \quad duncan.mcgough@pm.me \quad \\ \quad  \url{duncanam.github.io}}
 
 
 \begin{document}
@@ -38,33 +37,86 @@
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
-%\begin{rSection}{Work Experience}
 \begin{rSection}{Experience}
 
 %---------------------------------------------------------------------------------------
+  \begin{rSubsection}{{Space Exploration Technologies Corporation (SpaceX)}}{June 2020 - Present}{Software Engineer (2024), Propulsion Engineer (2020)}{Hawthorne, CA}
+  \begin{rSubsubsection}{sx\_fluids Python Library}
+    \item {\small Created widely-used thermal fluids simulation Python library, \texttt{sx\_fluids}, to model real/multiphase fluids}
+    \item {\small Developed CI/CD/K8s pipeline and monorepo with automated testing and coverage analysis, including extensive documentation}
+    \item {\small Trained analysts and team members on software engineering best practices, allowing for regular contribution}
+  \end{rSubsubsection}
 
-\begin{rSubsection}{Space Exploration Technologies Corporation (SpaceX)}{May 2019 - August 2019}{Associate Engineer - Post Grad, Thermal-Fluid Analysis}{Hawthorne, CA}
-	\item {\small Responsible for thermal analysis of Starlink Hall Thruster. Developed thermal model to help determine duty cycle and update various thruster components to have increased performance. Simplified thermal interfaces between thruster and satellite chassis.}
-	\item {\small Performed thermal analysis on Falcon 9 fairing to determine feasibility of simplification of the thermal protection system.}
-	\item {\small Analyzed Dragon spacecraft Draco hypergolic engine. Determined bounds on thrust forces caused by potential fault cases to help analyze tanks for propellant unsettling.  }
-	\item {\small Created thermal models of star trackers, propellant tanks, and propulsion avionics for Deluxe Bus satellite. Created scripts to determine thermal cycling for use by reliability team during avionics qualification.}
-	\item {\small Analyzed Falcon 9 second stage fuel baffle to determine maximum possible tolerances between fasteners. Determined worst case tolerance resulted in unacceptable fuel leakage. }
-\end{rSubsection}
+  \begin{rSubsubsection}{Starship Tank Press Model}
+    \item {\small Developed primary tank pressure simulator, now essential for flying Starship}
+    \item {\small Leverages \texttt{sx\_fluids}, and has features for easy analyst accessibility and high-performance computing (HPC) tooling}
+  \end{rSubsubsection}
+
+  \begin{rSubsubsection}{Rust Thermophysical Property Library Tools}
+    \item {\small Developed thread-safe wrappers for REFPROP (includes Python API), improving performance by several orders of magnitude}
+    \item {\small Created high-performance Peng-Robinson equation-of-state library with robust error handling to compliment REFPROP}
+  \end{rSubsubsection}
+
+  \begin{rSubsubsection}{Thermal Fluids Webapp Ecosystem}
+    \item {\small Created Kubernetes-hosted webapp suite and ecosystem for performing quick trades and calculations, saving time for analysis teams}
+    \item {\small Designed ecosystem for team contribution, which has now been adopted and is regularly-used}
+  \end{rSubsubsection}
+
+  \begin{rSubsubsection}{CFD Models}
+    \item {\small Built multiphase slosh models for Starship ascent and microgravity phases, optimizing mass-to-orbit and mission success}
+    \item {\small Created multiphase vapor-pullthrough models to minimize propellant residual by several tonnes and assess flight risk}
+    \item {\small Constructed highly-compressible gas simulations for RCS thrusters and tank-internal press gas diffusers  }
+    \item {\small Aforementioned CFD models have been built-upon and are still used; support/training is regularly shared}
+  \end{rSubsubsection}
+
+
+
+%  \item {\small Created widely-used \texttt{sx\_fluids} thermal fluids simulation Python library, featuring tools to solve for ideal/real-fluid and multiphase flowrates, zero-dimensional fluid node networks, vapor-pullthrough modeling, isentropic calculations, nozzle solvers, and more. Developed CI/CD pipeline and monorepo with automated testing, code coverage analysis, and PR reviews. Trained analysis team members on software engineering best practices, which enabled them to contribute to and maintain the library. Authored extensive documentation to improve accessibility. \texttt{sx\_fluids} has grown to be the staple analysis tool for the Starship thermal fluids analysis team.}
+%  \item {\small Developed the primary Starship tank pressure simulator using \texttt{sx\_fluids}, which is now essential for Starship operations. The simulation incorporates simplified zero-dimensional lumped parameter modeling, a no-code version-controlled configuration, multiprocessing, and statistical dispersion for input parameters. Created tooling to containerize the model for use in high-performance compute cluster (HPC) environments, facilitating efficient model submission. The model is accessible and contributed to regularly by team members.}
+%  \item {\small Created thread- and process-safe wrappers for REFPROP (thermophysical property lookup) in both Python and Rust, significantly improving performance by several orders of magnitude and increasing analysis cadence. Developed additional Rust simulation tools, utilizing Maturin/PyO3 to create streamlined Python packages that enable interaction with existing \texttt{sx\_fluids} ecosystem tools.}
+%  \item {\small Created an internal thermal fluid analysis webapp suite and ecosystem, which has been eagerly adopted and expanded beyond initial development, with several team members contributing new applications. This ecosystem enables teams across the company to perform quick trades and analyses, saving valuable time for the analysis team and reducing errors. Key webapps include frontends for interacting with tank pressure model predictions and visualizing data both transiently and spatially, vehicle spatial model viewers for estimating tank propellant fill levels and corresponding mass properties, and REFPROP thermophysical property lookups, among others.}
+%  \item {\small Maintain the analysis infrastructure for the Starship fluids team, which includes multiple git repositories for analysis software and analysis scripts, a CI/CD pipeline, test/build/deploy software, and Kubernetes cluster with automated deployment pipeline for fluid analysis webapps. Successfully migrated the team from MATLAB and SVN, introducing Python and Git, providing training and regular office hours to develop team members' software skills.}
+%  \item {\small Developed multiphase slosh CFD models for the Starship first and second stage rockets, analyzing performance during stage separation and in microgravity to iterate on GNC trajectory design and optimize mass-to-orbit performance and mission success. Enhanced model performance through adaptive meshing, adaptive timestepping, and sub-iteration VoF multistepping, maximizing efficiency while maintaining acceptable accuracy compared to non-accelerated models, resulting in improved analysis cadence.}
+%  \item {\small Built multiphase vapor-pullthrough CFD models to minimize residual propellant within Starship propellant tanks, improving mass-to-orbit by several tonnes. Some models also incorporate coupled engine dynamics to assess flight risk and inform mission success probability analysis. Additionally, developed automated simplified models for integration into GNC Monte-Carlo analysis, facilitating regular verification.}
+%  \item {\small Created high-Mach compressible gas CFD simulations for RCS thrusters and tank-internal press gas diffuser geometries. Developed software automation to perform mesh sweeps, leveraging Richardson extrapolation to minimize numerical error. Considering the selected turbulence models, simulations featured optimized boundary layer grids to improve heat transfer coefficient approximations in cryogenic environments and enhance overall model performance. The models also produced pressure loss factor estimates for the geometries, integrating with other analysis tools to quantify energy loss of injected pressurant to surroundings as collapse factors. }
+  \end{rSubsection}
+
 
 %---------------------------------------------------------------------------------------
 
-	\begin{rSubsection}{Space Exploration Technologies Corporation (SpaceX)}{May 2018 - August 2018}{Satellite Development Intern, Thermal-Fluid Analysis}{Seattle, WA}
-	\item {\small Produced and data-correlated a multiphysics ANSYS model of the hall-effect thruster used in the ``Tintin" and potential Starlink constellation. Model determined thermal expansion, temperatures, stress/strain, and vibration modes to inform the propulsion team on design choices for materials, sizing, and power as well as operation modes in orbit. Tested thruster coils in thermal vacuum chambers.}
-	\item{\small Developed a Python script that utilizes a machine learning clustering algorithm to simplify phased-array antennas for input into Thermal Desktop. Reduced necessary modeling and computational time in Thermal Desktop as a result.}
-	\item{\small Designed and constructed a test bed for determining performance of thermally-cycled heat pipes. Determined the initial performance of various heat pipe geometries and provided feedback for antenna thermal design. }
-	\item{\small Produced a multiphysics thermal-structural ANSYS model of phased array antennas and their beamformer chips to provide design feedback for structural and antenna team on power, structure, and placement of components.}
-	% you made a TD model of a tvac chamber with cold plates 
+  \begin{rSubsection}{Space Exploration Technologies Corporation (SpaceX)}{Summers 2018, 2019}{Satellite Development Intern (2018), Associate Engineer - Post Grad, Thermal-Fluid Analysis (2019)}{Hawthorne, CA}
+	\item {\small Developed Starlink hall-effect thruster thermal model to determine duty cycle and improve performance. Reduced bus mass.}
+	\item {\small Analyzed Dragon spacecraft Draco hypergolic engine, bounding fault cases for propellant unsettling}
+	\item {\small Created satellite thermal models of star trackers, propellant tanks, and propulsion avionics, used by qualification team}
+	\item {\small Analyzed Falcon 9 S2 fuel baffle leakage; discovered unacceptable leakage }
 \end{rSubsection}
+
+
+%---------------------------------------------------------------------------------------
+
+%\begin{rSubsection}{Space Exploration Technologies Corporation (SpaceX)}{May 2019 - August 2019}{Associate Engineer - Post Grad, Thermal-Fluid Analysis}{Hawthorne, CA}
+%	\item {\small Responsible for thermal analysis of Starlink Hall Thruster. Developed thermal model to help determine duty cycle and update various thruster components to have increased performance. Simplified thermal interfaces between thruster and satellite chassis.}
+%	\item {\small Performed thermal analysis on Falcon 9 fairing to determine feasibility of simplification of the thermal protection system.}
+%	\item {\small Analyzed Dragon spacecraft Draco hypergolic engine. Determined bounds on thrust forces caused by potential fault cases to help analyze tanks for propellant unsettling.  }
+%	\item {\small Created thermal models of star trackers, propellant tanks, and propulsion avionics for Deluxe Bus satellite. Created scripts to determine thermal cycling for use by reliability team during avionics qualification.}
+%	\item {\small Analyzed Falcon 9 second stage fuel baffle to determine maximum possible tolerances between fasteners. Determined worst case tolerance resulted in unacceptable fuel leakage. }
+%\end{rSubsection}
+
+%---------------------------------------------------------------------------------------
+
+%	\begin{rSubsection}{Space Exploration Technologies Corporation (SpaceX)}{May 2018 - August 2018}{Satellite Development Intern, Thermal-Fluid Analysis}{Seattle, WA}
+%	\item {\small Produced and data-correlated a multiphysics ANSYS model of the hall-effect thruster used in the ``Tintin" and potential Starlink constellation. Model determined thermal expansion, temperatures, stress/strain, and vibration modes to inform the propulsion team on design choices for materials, sizing, and power as well as operation modes in orbit. Tested thruster coils in thermal vacuum chambers.}
+%	\item{\small Developed a Python script that utilizes a machine learning clustering algorithm to simplify phased-array antennas for input into Thermal Desktop. Reduced necessary modeling and computational time in Thermal Desktop as a result.}
+%	\item{\small Designed and constructed a test bed for determining performance of thermally-cycled heat pipes. Determined the initial performance of various heat pipe geometries and provided feedback for antenna thermal design. }
+%	\item{\small Produced a multiphysics thermal-structural ANSYS model of phased array antennas and their beamformer chips to provide design feedback for structural and antenna team on power, structure, and placement of components.}
+%	% you made a TD model of a tvac chamber with cold plates
+%\end{rSubsection}
 
 %---------------------------------------------------------------------------------------
 
 \begin{rSubsection}{Roccor LLC }{May 2017 - August 2017}{Thermal Engineering Intern, Thermal Group}{Longmont, CO}
-\item {\small Engineered thermal vacuum chamber for deployable composite CubeSat radiators. Met NASA and Roccor project requirements and worked with machinists and welders to manufacture the chamber. Operated within project budgets and deadlines. Designed and simulated in SolidWorks and validated results by hand. Worked with FLIR instrumentation for chamber with IR optics. Developed Thermal Desktop model for system. Calibrated and tested chamber. Assisted thermal team with next-generation heat pipe development. Tested thermal solutions with high-vacuum systems.}
+%\item {\small Engineered thermal vacuum chamber for deployable composite CubeSat radiators. Met NASA and Roccor project requirements and worked with machinists and welders to manufacture the chamber. Operated within project budgets and deadlines. Designed and simulated in SolidWorks and validated results by hand. Worked with FLIR instrumentation for chamber with IR optics. Developed Thermal Desktop model for system. Calibrated and tested chamber. Assisted thermal team with next-generation heat pipe development. Tested thermal solutions with high-vacuum systems.}
+\item {\small Engineered thermal vacuum chamber for deployable composite CubeSat radiators. Met NASA/Roccor project requirements, budgets, and deadlines. Advised manufacturing of chamber. Designed and simulated, validating with test data.}
 \end{rSubsection}
 
 %---------------------------------------------------------------------------------------
@@ -84,7 +136,7 @@
 %---------------------------------------------------------------------------------------
 
 %\begin{rSubsection}{Simply Mac Apple Specialist}{May 2015 - August 2015}{Sales Consultant}{Rapid City, SD}
-%\item {\small Provide customers with knowledge about technical products, troubleshoot and diagnose electrical and hardware problems, sell technical hardware and software to customers, and work effectively in a team-driven atmosphere.} 
+%\item {\small Provide customers with knowledge about technical products, troubleshoot and diagnose electrical and hardware problems, sell technical hardware and software to customers, and work effectively in a team-driven atmosphere.}
 %\end{rSubsection}
 
 
@@ -105,44 +157,45 @@
 %\item {\small Manage propulsion subteam. Develop short and long-term goals. Interface with other subteams to insure product compatibility. Developing multistage rocket motor capable of 100km altitude.}
 %\item {\small \textit{Previous Hybrid Rocket Revelopment Project:} Modeled oxidizer injector assembly and used CFD and FEA to validate designs. Calculated nozzle geometry and flow rates. Designed liquid oxidizer storage and delivery/injection systems for a hybrid rocket capable of 500N thrust.}
 %\item {\small \textit{Previous General Team Responsibilities:} Assisted with the construction of a two-stage fiberglass rocket capable of reaching 10,000 feet AGL. Constructed body couplers, staging chassis, carbon fiber fins, payload and avionics bulkheads.}
-\item {\small Manage propulsion subteam. Modeled oxidizer injector assembly and used CFD and FEA to validate designs. Calculated nozzle geometry and flow rates. Designed liquid oxidizer storage and delivery/injection systems for a hybrid rocket. } 
+\item {\small Manage propulsion subteam. Modeled oxidizer injector assembly and used CFD and FEA to validate designs. Calculated nozzle geometry and flow rates. Designed liquid oxidizer storage and delivery/injection systems for a hybrid rocket. }
 \end{rSubsection}
 
 
 %---------------------------------------------------------------------------------------
 
 %\begin{rSubsection}{CU COBRA Rocketry Team}{March 2016 - Present}{Team Member}{Boulder, CO}
-%\item Assist with the construction of a two-stage fiberglass rocket capable of reaching 10,000 feet AGL. Constructed body couplers and staging chassis for subscale demonstration rocket. Formed and smoothed carbon fiber fins. Constructed payload and avionics bulkheads. 
+%\item Assist with the construction of a two-stage fiberglass rocket capable of reaching 10,000 feet AGL. Constructed body couplers and staging chassis for subscale demonstration rocket. Formed and smoothed carbon fiber fins. Constructed payload and avionics bulkheads.
 %\end{rSubsection}
 
 %---------------------------------------------------------------------------------------
 
 
 \begin{rSubsection}{Gridded Electrostatic Ion Thruster Research BalloonSat Project}{January 2016 - May 2016}{Team Lead}{Boulder, CO}
-\item {\small Led a team of CU Boulder students in an engineering projects class to design, test, and fly a high-altitude BalloonSat payload. Developed, researched, and constructed a low-cost gridded electrostatic ion thruster to test at altitude for deployment upon CubeSats. Designed and soldered power distribution for environmental sensor data collection and thruster. Analyzed data retrieved.}
+%\item {\small Led a team of CU Boulder students in an engineering projects class to design, test, and fly a high-altitude BalloonSat payload. Developed, researched, and constructed a low-cost gridded electrostatic ion thruster to test at altitude for deployment upon CubeSats. Designed and soldered power distribution for environmental sensor data collection and thruster. Analyzed data retrieved.}
+\item {\small Led a team to design, test, and fly a high-altitude BalloonSat payload. Developed, researched, and constructed a low-cost gridded electrostatic ion thruster to test at altitude for deployment upon CubeSats.}
 \end{rSubsection}
 
 %---------------------------------------------------------------------------------------
 %\begin{rSubsection}{High-Altitude Balloon Projects}{December 2013 - May 2015}{Team Leads}{Rapid City, SD}
 %\item {\small Led two teams of students to compete and win twice in successfully-funded design competitions for high-altitude ballooning projects that were launched and retrieved. Managed sub-teams. Designed and programmed live radio communication modules. Custom-built antenna and data transfer nodes and analyzed retrieved data. Programmed flight computer and all data collection instruments. Constructed payload module and assembled all technical devices for flight.}
-%\end{rSubsection} 
+%\end{rSubsection}
 
 %---------------------------------------------------------------------------------------
 
 %\begin{rSubsection}{2015 High-Altitude Balloon Project}{December 2014 - May 2015}{Team Lead}{Rapid City, SD}
-%\item Led a team of students to compete and win in a successfully-funded design competition for a high-altitude balloon project that was launched and retrieved. Managed the sub-teams. Designed and programmed the live radio communication modules. Custom-built the antenna and data transfer node and analyzed the retrieved data. 
+%\item Led a team of students to compete and win in a successfully-funded design competition for a high-altitude balloon project that was launched and retrieved. Managed the sub-teams. Designed and programmed the live radio communication modules. Custom-built the antenna and data transfer node and analyzed the retrieved data.
 %\end{rSubsection}
 
 %---------------------------------------------------------------------------------------
 
 %\begin{rSubsection}{2014 High-Altitude Balloon Project}{December 2013 - May 2014}{Technical Team Lead}{Rapid City, SD}
-%\item Led a team of students to design and build the technical payload for a high-altitude balloon. Programmed the flight computer and all the data collection instruments. Constructed the payload module and assembled all technical devices for flight. Analyzed data retrieved. 
+%\item Led a team of students to design and build the technical payload for a high-altitude balloon. Programmed the flight computer and all the data collection instruments. Constructed the payload module and assembled all technical devices for flight. Analyzed data retrieved.
 %\end{rSubsection}
 
 %---------------------------------------------------------------------------------------
 
 %\begin{rSubsection}{2015 Tornado Shelter Design Project}{December 2014 - June 2015}{Theorist and Component Design}{Rapid City, SD}
-%\item Theorist in a team of students for a portable tornado shelter %design competition. Tested and modeled structure design in fluid-flow %software to determine weak componentry. Designed latching and hinge %mechanisms. Calculated fluid dynamic forces on the structure and %determined failure limits for all components. 
+%\item Theorist in a team of students for a portable tornado shelter %design competition. Tested and modeled structure design in fluid-flow %software to determine weak componentry. Designed latching and hinge %mechanisms. Calculated fluid dynamic forces on the structure and %determined failure limits for all components.
 %\end{rSubsection}
 
 %----------------------------------------------------------------------------------------
@@ -165,12 +218,11 @@
 
 \begin{rSection}{Education}
 
-{\bf University of Colorado, Boulder} \hfill {\em August 2015 - Present} \\ 
+{\bf University of Colorado, Boulder} \hfill {August 2015 - Present} \\
 {\small Engineering Honors Program, Chancellor's Scholarship\\
-Masters of Science, Aerospace Engineering Sciences with focus on Fluids and Propulsion \hfill \textit{Expected Graduation: May 2020} \\
+Masters of Science, Aerospace Engineering Sciences with focus on Fluids and Propulsion \hfill May 2020 \\
 Bachelor of Science, Aerospace Engineering Sciences \hfill  May 2019 \\
-Bachelor of Music, Violin Performance (College of Music Scholarship Award) \hfill August 2015 - May 2016 
-} 
+Bachelor of Music, Violin Performance (College of Music Scholarship Award) \hfill August 2015 - May 2016}
 
 \end{rSection}
 
@@ -178,15 +230,15 @@ Bachelor of Music, Violin Performance (College of Music Scholarship Award) \hfil
 %	TECHNICAL STRENGTHS SECTION
 %----------------------------------------------------------------------------------------
 
-%\begin{rSection}{Technical Strengths}
 \begin{rSection}{Strengths and Skills}
 \scalebox{0.9}{
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Programming & Python, MATLAB, Julia, C++, LABVIEW, \LaTeX  \\
-	Software & ANSYS, Thermal Desktop, CFD (OpenFOAM), CAD (SolidWorks, NX),  Microsoft Office Suite \\
-Equipment & Microcontrollers, 3D printers, high-vacuum systems, shop equipment, electrical equipment (e.g. soldering) \\
-OS & Linux, OSX, Windows, using Virtual Machines \\
-Personal Interests & Violin, tuner car modification, freeride skiing, mountain biking, martial arts \\
+Languages & Rust, Python, MATLAB, Julia, C++  \\
+Frameworks & Docker, Kubernetes, Maturin/PyO3, Leptos, Clap (Rust CLI), Tokio, Axum, Serde, Flask, Traefik \\
+Software & STAR-CCM+, OpenFOAM, ANSYS, Thermal Desktop, CAD (SolidWorks, NX) \\
+%Equipment & Microcontrollers, 3D printers, high-vacuum systems, shop equipment, electrical equipment (e.g. soldering) \\
+OS & Linux, OSX, Windows, slurm (HPC), ProxMox, using Virtual Machines \\
+Personal Interests & Violin, freeride skiing, mountain biking, martial arts, spikeball, FPV drones \\
 \end{tabular}
 }
 \end{rSection}
