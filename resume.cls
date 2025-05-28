@@ -95,6 +95,7 @@
 
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
+  \vspace{-0.5em}
   \sectionskip
   \MakeUppercase{\bf #1} % Section title
   \sectionlineskip
@@ -117,11 +118,29 @@
   \\
   {\em #3} \hfill {\em #4} % Italic job title and location
   }\smallskip
+  \vspace{-0.2em}
   \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
    \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
   }{
   \end{list}
  \vspace{0.15em} % Some space after the list of bullet points
+}
+
+% Used to format sub-subsection listing
+\newenvironment{rSubsubsection}[1]{
+  %%%%%%%%%%%%%%%%%%%%%% Default Layout: %%%%%%%%%%%%%%%%%%%%%%%%
+  %%    Subsection Title (bold)                Description (regular) %%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \hspace{0.2em} % Indent the title too
+  \textit{\textbf{\small #1}} \hfill
+  \smallskip
+  % \cdot used for bullets, items non-indented
+  \vspace{-0.3em}
+  \begin{list}{$\cdot$}{\leftmargin=1.5em}
+  \itemsep -0.5em \vspace{-0.5em}
+}{
+  \end{list}
+  \vspace{-0.2em}
 }
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
