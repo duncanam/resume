@@ -133,6 +133,7 @@
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \hspace{0.2em} % Indent the title too
   \textit{\textbf{\small #1}} \hfill
+  \vspace{-0.05em}
   \smallskip
   % \cdot used for bullets, items non-indented
   \vspace{-0.3em}
